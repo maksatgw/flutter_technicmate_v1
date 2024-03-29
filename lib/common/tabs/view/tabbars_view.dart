@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_technicmate_v1/features/home/view/home_view.dart';
-import 'package:flutter_technicmate_v1/utils/custom_svg.dart';
+import 'package:flutter_technicmate_v1/theme/custom_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_technicmate_v1/common/drawer/view/custom_drawer.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 
 class TabBarsView extends StatefulWidget {
@@ -66,7 +66,7 @@ class _TabBarsViewState extends State<TabBarsView> with SingleTickerProviderStat
           ],
         ),
       ),
-      drawer: Drawer(),
+      drawer: const CustomDrawer(),
       body: TabBarView(
         controller: _tabController,
         children: [

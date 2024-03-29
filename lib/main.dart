@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_technicmate_v1/features/home/view/home_view.dart';
-import 'package:flutter_technicmate_v1/features/tabs/view/tabbars_view.dart';
+import 'package:flutter_technicmate_v1/features/auth/login/view/login_view.dart';
+import 'package:flutter_technicmate_v1/theme/theme.dart';
 import 'package:get/get.dart';
 
-void main() => runApp(
-      GetMaterialApp(
-        darkTheme: ThemeData(
-          brightness: Brightness.dark,
-          scaffoldBackgroundColor: Colors.black,
-          drawerTheme: const DrawerThemeData(
-            backgroundColor: Colors.black,
-          ),
-          tabBarTheme: const TabBarTheme(),
-        ),
-        themeMode: ThemeMode.dark,
-        debugShowCheckedModeBanner: false,
-        home: const TabBarsView(),
-      ),
-    );
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  return runApp(
+    GetMaterialApp(
+      darkTheme: AppTheme.theme,
+      themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
+      home: const LoginView(),
+    ),
+  );
+}
