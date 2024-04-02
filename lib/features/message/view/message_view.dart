@@ -83,10 +83,7 @@ class _MessageViewState extends State<MessageView> {
       ),
       body: ListView.separated(
         separatorBuilder: (context, index) {
-          return const Divider(
-            height: 1,
-            color: Palette.textGrey777,
-          );
+          return const Divider();
         },
         itemCount: 2,
         itemBuilder: (context, index) {
