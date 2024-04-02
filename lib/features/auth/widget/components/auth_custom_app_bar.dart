@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_technicmate_v1/theme/custom_svg.dart';
-import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:flutter_technicmate_v1/constants/assets_constant.dart';
 
 class AuthCustomAppBar extends StatelessWidget with PreferredSizeWidget {
   const AuthCustomAppBar({
@@ -12,9 +12,9 @@ class AuthCustomAppBar extends StatelessWidget with PreferredSizeWidget {
     return AppBar(
       leading: const SizedBox(),
       flexibleSpace: SafeArea(
-        child: Iconify(
-          logo,
-          size: 40,
+        child: SvgPicture.asset(
+          AssetsConstants.technicMateLogo,
+          height: 40,
         ),
       ),
       centerTitle: true,

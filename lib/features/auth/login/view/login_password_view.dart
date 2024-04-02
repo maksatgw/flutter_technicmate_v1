@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_technicmate_v1/common/navigation_bottom/view/bottom_navigation_view.dart';
 import 'package:flutter_technicmate_v1/features/auth/auth.dart';
 import 'package:flutter_technicmate_v1/features/auth/login/login.dart';
-import 'package:flutter_technicmate_v1/common/tabs/view/tabbars_view.dart';
 import 'package:get/get.dart';
 
 class LoginPassword extends StatefulWidget {
@@ -45,7 +45,7 @@ class _LoginPasswordState extends State<LoginPassword> {
               leftButtonText: leftButtonText,
               rightButtonText: rightButtonText,
               onPressedRight: () {
-                Get.to(() => const TabBarsView(), transition: Transition.rightToLeft);
+                Get.to(() => const BottomNavigationView(), transition: Transition.rightToLeft);
               },
               onPressedLeft: () {
                 Get.to(() => const LoginForgotPassword(), transition: Transition.leftToRight);

@@ -18,7 +18,6 @@ class RegisterCustomButtonLikeContainer extends StatelessWidget {
       height: 45,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
-        // color: Color(controller.activeColor),
         color: color,
       ),
       child: Center(

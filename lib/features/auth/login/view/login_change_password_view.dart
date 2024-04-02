@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_technicmate_v1/common/navigation_bottom/view/bottom_navigation_view.dart';
 import 'package:flutter_technicmate_v1/features/auth/auth.dart';
 import 'package:flutter_technicmate_v1/theme/theme.dart';
-import 'package:flutter_technicmate_v1/common/tabs/view/tabbars_view.dart';
 import 'package:get/get.dart';
 
 class LoginChangePassword extends StatefulWidget {
@@ -38,7 +38,7 @@ class _LoginChangePasswordState extends State<LoginChangePassword> {
               glowColor: Palette.loginButtonBlueColor,
               onPressed: () {
                 Get.to(
-                  const TabBarsView(),
+                  const BottomNavigationView(),
                   transition: Transition.rightToLeft,
                 );
               },

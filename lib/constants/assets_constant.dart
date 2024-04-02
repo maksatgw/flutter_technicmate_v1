@@ -1,0 +1,17 @@
+class AssetsConstants {
+  static const String _svgsPath = 'assets/svgs';
+  static const String technicMateLogo = '$_svgsPath/ic_technicmate_logo.svg';
+
+  //Bottom NavBar
+  static const String bottomNavHomeActive = '$_svgsPath/bottom_navbar/ic_home_active.svg';
+  static const String bottomNavHomePassive = '$_svgsPath/bottom_navbar/ic_home_passive.svg';
+  static const String bottomNavSearchActive = '$_svgsPath/bottom_navbar/ic_search_active.svg';
+  static const String bottomNavSearchPassive = '$_svgsPath/bottom_navbar/ic_search_passive.svg';
+  static const String bottomNavNotificationActive = '$_svgsPath/bottom_navbar/ic_notification_active.svg';
+  static const String bottomNavNotificationPassive = '$_svgsPath/bottom_navbar/ic_notification_passive.svg';
+  static const String bottomNavMessageActive = '$_svgsPath/bottom_navbar/ic_message_active.svg';
+  static const String bottomNavMessagePassive = '$_svgsPath/bottom_navbar/ic_message_passive.svg';
+  static const String bottomNavBarCenterAdd = '$_svgsPath/bottom_navbar/ic_add_center.svg';
+
+  static const String threeDotsOption = '$_svgsPath/ic_three_dots.svg';
+}

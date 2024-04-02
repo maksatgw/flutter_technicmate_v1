@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_technicmate_v1/theme/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AuthCustomUserCard extends StatelessWidget {
@@ -22,7 +23,7 @@ class AuthCustomUserCard extends StatelessWidget {
         CircleAvatar(
           radius: 78,
           backgroundImage: NetworkImage(avatarImage),
-          backgroundColor: Colors.white,
+          backgroundColor: Palette.white,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -39,7 +40,7 @@ class AuthCustomUserCard extends StatelessWidget {
               style: GoogleFonts.inter(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-                color: const Color(0xFF005493),
+                color: Palette.authSuffixColor,
               ),
             ),
           ],

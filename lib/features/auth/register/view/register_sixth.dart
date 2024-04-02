@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_technicmate_v1/common/tabs/view/tabbars_view.dart';
+import 'package:flutter_technicmate_v1/common/navigation_bottom/view/bottom_navigation_view.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:timer_count_down/timer_count_down.dart';
@@ -91,7 +91,7 @@ class _RegisterSixthState extends State<RegisterSixth> {
                 Get.back();
               },
               onPressedRight: () {
-                Get.to(() => const TabBarsView(), transition: Transition.rightToLeft);
+                Get.to(() => const BottomNavigationView(), transition: Transition.rightToLeft);
               },
             )
           ],
