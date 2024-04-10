@@ -24,8 +24,8 @@ class HomeController extends GetxController with GetSingleTickerProviderStateMix
         name: "Jane Smith",
         username: "@janesmith",
         date: "March 11, 2024",
-        postText: "Just enjoying the day!",
-        image: null,
+        postText: null,
+        image: "https://pbs.twimg.com/media/GH_8phlWAAAiQls?format=jpg&name=4096x4096",
       ),
       Post(
         name: "Alice Johnson",
@@ -36,6 +36,4 @@ class HomeController extends GetxController with GetSingleTickerProviderStateMix
       ),
     ];
   }
-
-  
 }
