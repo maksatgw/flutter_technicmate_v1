@@ -17,4 +17,9 @@ class Palette {
   static const textGrey777 = Color(0xFF777777);
   static const textGrey9999 = Color(0xFF999999);
   static const textGreyA1A1A1 = Color(0xFFA1A1A1);
+
+  static const chatTextFieldBg = Color(0xFF141414);
+  static const chatDarkBlueButtonColor = Color(0xFF052631);
+  static const chatBlueButtonColor = Color(0xFF00C2FF);
+  static const chatBubbleDarkBlueColor = Color(0xFF041C24);
 }
