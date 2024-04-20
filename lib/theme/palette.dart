@@ -22,4 +22,6 @@ class Palette {
   static const chatDarkBlueButtonColor = Color(0xFF052631);
   static const chatBlueButtonColor = Color(0xFF00C2FF);
   static const chatBubbleDarkBlueColor = Color(0xFF041C24);
+
+  static const tmpostCreateChipInactive = Color(0xFF6D6D6D);
 }

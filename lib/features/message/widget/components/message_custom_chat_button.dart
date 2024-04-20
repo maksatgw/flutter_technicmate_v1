@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_technicmate_v1/theme/theme.dart';
 
 class MessageCustomChatScreenTextFieldButton extends StatelessWidget {
   const MessageCustomChatScreenTextFieldButton({
@@ -19,7 +18,7 @@ class MessageCustomChatScreenTextFieldButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(15),
         backgroundColor: backgroundColor,
       ),
       child: icon,

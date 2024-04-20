@@ -3,12 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_technicmate_v1/common/navigation_bottom/controller/bottom_navigation_controller.dart';
 import 'package:flutter_technicmate_v1/constants/constants.dart';
-import 'package:flutter_technicmate_v1/features/home/view/home_view.dart';
-import 'package:flutter_technicmate_v1/features/notification/view/notification_view.dart';
-import 'package:flutter_technicmate_v1/features/search/view/search_view.dart';
+import 'package:flutter_technicmate_v1/features/tmpost/view/tmpost_create_view.dart';
 import 'package:flutter_technicmate_v1/theme/theme.dart';
 import 'package:get/get.dart';
-import 'package:iconify_flutter/iconify_flutter.dart';
 
 class BottomNavigationView extends StatefulWidget {
   const BottomNavigationView({super.key});
@@ -32,7 +29,13 @@ class _BottomNavigationViewState extends State<BottomNavigationView> {
       bottomNavigationBar: Obx(
         () => CupertinoTabBar(
           currentIndex: controller.page.value,
-          onTap: controller.onPageChange,
+          onTap: (index) {
+            if (index != 2) {
+              controller.onPageChange(index);
+            } else {
+              Get.to(() => const TMPostCreateView());
+            }
+          },
           backgroundColor: Palette.transparent,
           height: 80,
           items: [
@@ -54,10 +57,7 @@ class _BottomNavigationViewState extends State<BottomNavigationView> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(100),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: SvgPicture.asset(AssetsConstants.bottomNavBarCenterAdd),
-                ),
+                child: Padding(padding: const EdgeInsets.all(20.0), child: SvgPicture.asset(AssetsConstants.bottomNavBarCenterAdd)),
               ),
             ),
             BottomNavigationBarItem(

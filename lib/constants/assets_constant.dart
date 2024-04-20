@@ -14,4 +14,6 @@ class AssetsConstants {
   static const String bottomNavBarCenterAdd = '$_svgsPath/bottom_navbar/ic_add_center.svg';
 
   static const String threeDotsOption = '$_svgsPath/ic_three_dots.svg';
+  static const String iconQuestion = '$_svgsPath/ic_question.svg';
+  static const String iconInfo = '$_svgsPath/ic_info.svg';
 }
