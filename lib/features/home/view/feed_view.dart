@@ -14,6 +14,7 @@ class FeedPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      physics: const BouncingScrollPhysics(),
       itemCount: postList.length,
       separatorBuilder: (context, index) => const Divider(
         color: Palette.seperatorGrey,

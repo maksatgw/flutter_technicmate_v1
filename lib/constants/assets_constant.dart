@@ -16,4 +16,6 @@ class AssetsConstants {
   static const String threeDotsOption = '$_svgsPath/ic_three_dots.svg';
   static const String iconQuestion = '$_svgsPath/ic_question.svg';
   static const String iconInfo = '$_svgsPath/ic_info.svg';
+
+  static const String uniCap = '$_svgsPath/ic_unicap.svg';
 }
