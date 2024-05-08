@@ -36,9 +36,9 @@ class LoginForgotPasswordState extends State<LoginForgotPassword> {
               mailSuffix: mailSuffix,
               subTitle: subTitle,
             ),
-            AuthCustomInputSection(
-              upperTextFieldText: upperTextFieldText,
-            ),
+            // AuthCustomInputSection(
+            //   upperTextFieldText: upperTextFieldText,
+            // ),
             AuthCustomGlowButton(
               buttonText: rightButtonText,
               color: Palette.loginButtonBlueColor,

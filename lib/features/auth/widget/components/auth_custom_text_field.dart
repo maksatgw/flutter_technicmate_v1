@@ -5,13 +5,15 @@ import 'package:google_fonts/google_fonts.dart';
 class AuthCustomTextField extends StatelessWidget {
   const AuthCustomTextField({
     Key? key,
+    required this.textEditingController,
   }) : super(key: key);
-
+  final TextEditingController textEditingController;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 45,
-      child: TextField(
+      child: TextFormField(
+        controller: textEditingController,
         decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(6), borderSide: BorderSide.none),
           filled: true,

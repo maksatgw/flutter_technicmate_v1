@@ -31,7 +31,7 @@ class _LoginChangePasswordState extends State<LoginChangePassword> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             AuthCustomUserCard(avatarImage: avatarImage, mailAlias: mailAlias, mailSuffix: mailSuffix, subTitle: subTitle),
-            AuthCustomInputSection(upperTextFieldText: upperTextFieldText),
+            // AuthCustomInputSection(upperTextFieldText: upperTextFieldText),
             AuthCustomGlowButton(
               buttonText: rightButtonText,
               color: Palette.loginButtonBlueColor,

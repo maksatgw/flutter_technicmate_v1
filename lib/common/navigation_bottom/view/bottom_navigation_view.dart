@@ -20,6 +20,7 @@ class _BottomNavigationViewState extends State<BottomNavigationView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       body: Obx(
         () => IndexedStack(
           index: controller.page.value,

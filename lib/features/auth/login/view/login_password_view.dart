@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_technicmate_v1/common/navigation_bottom/view/bottom_navigation_view.dart';
 import 'package:flutter_technicmate_v1/features/auth/auth.dart';
 import 'package:flutter_technicmate_v1/features/auth/login/login.dart';
+import 'package:flutter_technicmate_v1/features/auth/login/model/login_model.dart';
 import 'package:get/get.dart';
 
 class LoginPassword extends StatefulWidget {
-  const LoginPassword({super.key});
+  const LoginPassword({super.key, required this.signIn});
+  final SignIn signIn;
 
   @override
   State<LoginPassword> createState() => _LoginPasswordState();
@@ -23,6 +25,8 @@ class _LoginPasswordState extends State<LoginPassword> {
   final String mailSuffix = '@deu.edu.tr';
   final String subTitle = 'Yeniden hoş geldin!';
 
+  var textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,13 +43,15 @@ class _LoginPasswordState extends State<LoginPassword> {
             ),
             AuthCustomInputSection(
               upperTextFieldText: upperTextFieldText,
+              textEditingController: textEditingController,
             ),
             AuthCustomButtonSection(
               upperButtonText: upperButtonText,
               leftButtonText: leftButtonText,
               rightButtonText: rightButtonText,
               onPressedRight: () {
-                Get.to(() => const BottomNavigationView(), transition: Transition.rightToLeft);
+                widget.signIn.password = textEditingController.text;
+                // Get.to(() => const BottomNavigationView(), transition: Transition.rightToLeft);
               },
               onPressedLeft: () {
                 Get.to(() => const LoginForgotPassword(), transition: Transition.leftToRight);

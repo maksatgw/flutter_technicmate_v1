@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_technicmate_v1/common/widgets/custom_app_bar.dart';
 import 'package:flutter_technicmate_v1/constants/assets_constant.dart';
+import 'package:flutter_technicmate_v1/features/message/view/chat_screen_view.dart';
 import 'package:flutter_technicmate_v1/theme/theme.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/zondicons.dart';
@@ -17,67 +20,19 @@ class _MessageViewState extends State<MessageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Mesajlar",
-          style: GoogleFonts.inriaSans(fontSize: 20),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.add,
-              color: Colors.white,
-              size: 35,
+      appBar: CustomAppBar(
+        title: SizedBox(
+          height: 40,
+          child: TextField(
+            style: const TextStyle(fontSize: 14),
+            decoration: InputDecoration(
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(50), borderSide: BorderSide.none),
+              filled: true,
+              fillColor: Palette.authTextFieldFillColor,
+              hintText: "Ara",
+              hintStyle: GoogleFonts.inter(fontSize: 14),
+              contentPadding: const EdgeInsets.all(10),
             ),
-          ),
-        ],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(kToolbarHeight),
-          child: Column(
-            children: [
-              const Divider(height: 1),
-              AppBar(
-                title: TextField(
-                  textAlignVertical: TextAlignVertical.center,
-                  decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.only(bottom: 5, left: 5),
-                    label: Row(
-                      children: [
-                        const Iconify(
-                          Zondicons.search,
-                          color: Palette.textGrey777,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Text(
-                            "Search",
-                            style: GoogleFonts.inriaSans(fontSize: 18),
-                          ),
-                        ),
-                      ],
-                    ),
-                    floatingLabelBehavior: FloatingLabelBehavior.never,
-                    filled: true,
-                    fillColor: Palette.searchFieldFillColor,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
-                ),
-                actions: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Iconify(
-                      Zondicons.tuning,
-                      color: Palette.usernameGrey,
-                    ),
-                  ),
-                ],
-              ),
-              const Divider(height: 1),
-            ],
           ),
         ),
       ),
@@ -88,20 +43,37 @@ class _MessageViewState extends State<MessageView> {
         itemCount: 2,
         itemBuilder: (context, index) {
           return ListTile(
+            onTap: () {
+              Get.to(() => ChatScreenView());
+            },
             leading: const CircleAvatar(
-              backgroundColor: Colors.red,
-              radius: 30,
+              radius: 24,
+              backgroundImage: NetworkImage(
+                'https://pbs.twimg.com/profile_images/1622557245950107648/jq2sqW7i_400x400.jpg',
+              ),
             ),
-            title: const Text(
-              "Egemen Baha Barutçu",
+            title: Text(
+              "Egemen Baha Barutcu",
+              style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.w300),
             ),
-            subtitle: Row(
-              children: const [
-                Text("1 Yeni Mesaj"),
-                Text("• 2S"),
+            subtitle: Wrap(
+              spacing: 5,
+              children: [
+                Text(
+                  "Teşekkürler",
+                  style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w300),
+                ),
+                Text(
+                  "• Şimdi",
+                  style: GoogleFonts.inter(fontSize: 14, fontWeight: FontWeight.w300),
+                ),
               ],
             ),
-            trailing: const Icon(Icons.send),
+            trailing: SvgPicture.asset(
+              AssetsConstants.messageSend,
+              height: 20,
+              width: 20,
+            ),
           );
         },
       ),

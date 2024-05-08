@@ -69,7 +69,7 @@ class _RegisterSixthState extends State<RegisterSixth> {
                 } else {
                   return Column(
                     children: [
-                      const AuthCustomInputSection(upperTextFieldText: "Kodu Girin"),
+                      // const AuthCustomInputSection(upperTextFieldText: "Kodu Girin"),
                       Countdown(
                         seconds: 120,
                         build: (BuildContext context, double time) => Text("${time.toInt()} saniye"),

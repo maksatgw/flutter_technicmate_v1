@@ -28,9 +28,9 @@ class _RegisterViewState extends State<RegisterView> {
             ),
             Column(
               children: const [
-                AuthCustomInputSection(upperTextFieldText: RegisterConstants.registerFirstInputFirst),
+                // AuthCustomInputSection(upperTextFieldText: RegisterConstants.registerFirstInputFirst),
                 SizedBox(height: RegisterConstants.defaultSizedBoxHeight10),
-                AuthCustomInputSection(upperTextFieldText: RegisterConstants.registerFirstInputSecond),
+                // AuthCustomInputSection(upperTextFieldText: RegisterConstants.registerFirstInputSecond),
               ],
             ),
             AuthCustomButtonSection(

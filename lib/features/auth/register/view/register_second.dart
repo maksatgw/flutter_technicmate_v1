@@ -25,7 +25,7 @@ class _RegisterSecondState extends State<RegisterSecond> {
               mailSuffix: RegisterConstants.mailAlias,
               subTitle: RegisterConstants.mailAlias,
             ),
-            const AuthCustomInputSection(upperTextFieldText: RegisterConstants.registerSecondInputFirst),
+            // const AuthCustomInputSection(upperTextFieldText: RegisterConstants.registerSecondInputFirst),
             AuthCustomButtonSection(
               upperButtonText: RegisterConstants.emptyStr,
               leftButtonText: RegisterConstants.getBackButtonText,

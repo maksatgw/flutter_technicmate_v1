@@ -20,7 +20,7 @@ class FeedPageBody extends StatelessWidget {
         color: Palette.seperatorGrey,
       ),
       addRepaintBoundaries: false,
-      itemBuilder: (context, index) => PostCard(
+      itemBuilder: (context, index) => PostCard2(
         posts: postList[index],
       ),
     );

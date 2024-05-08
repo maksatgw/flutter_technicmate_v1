@@ -18,4 +18,6 @@ class AssetsConstants {
   static const String iconInfo = '$_svgsPath/ic_info.svg';
 
   static const String uniCap = '$_svgsPath/ic_unicap.svg';
+
+  static const String messageSend = '$_svgsPath/ic_send_message.svg';
 }

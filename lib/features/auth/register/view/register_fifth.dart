@@ -25,7 +25,7 @@ class _RegisterFifthState extends State<RegisterFifth> {
               mailSuffix: "@deu.edu.tr",
               subTitle: "kayıt için doldur",
             ),
-            const AuthCustomInputSection(upperTextFieldText: "Şifre Belirle"),
+            // const AuthCustomInputSection(upperTextFieldText: "Şifre Belirle"),
             AuthCustomButtonSection(
               upperButtonText: "",
               leftButtonText: "Geri Dön",
