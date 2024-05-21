@@ -20,7 +20,7 @@ class RegisterFourthController extends GetxController {
         color: CupertinoColors.systemBackground.resolveFrom(Get.context!),
         child: SafeArea(
           top: false,
-          child: child, // child değişkeninizin tanımlı olduğundan emin olun
+          child: child,
         ),
       ),
     );
